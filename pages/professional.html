@@ -100,7 +100,7 @@ permalink: /professional/
         .card {
             position: relative;
             width: 90%; /* 控制卡片宽度以适应手机屏幕 */
-            height: 400px; /* 固定卡片高度 */
+            height: auto; /* 卡片高度自适应内容 */
             margin: 10px 0; /* 设置卡片间的等距间隙 */
             transform: none;
             box-shadow: none;
@@ -112,6 +112,7 @@ permalink: /professional/
         }
         .card.left, .card.right {
             order: 0; /* 将左右卡片排列在下方 */
+            transform: none; /* 确保卡片在手机上没有3D效果 */
         }
         .card .info p {
             font-size: 1.2rem;
@@ -124,7 +125,6 @@ permalink: /professional/
             -webkit-line-clamp: 3; /* 限制行数为3行 */
         }
     }
-
 </style>
 
 <div class="container">
