@@ -78,7 +78,74 @@ nav a {
 nav a:hover {
     background-color: #87CEEB;
 }
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
 .container {
+    min-height: calc(100vh - 100px); /* 确保内容区域足够高 */
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* 确保容器宽度为百分比 */
+    box-sizing: border-box; /* 总是将padding和border计算在内 */
+}
+iner {
     min-height: calc(100vh - 100px); /* 确保内容区域足够高 */
     display: flex;
     flex-direction: column;
