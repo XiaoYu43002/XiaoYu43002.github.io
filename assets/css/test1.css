@@ -1,9 +1,3 @@
-html,body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
 header {
     background-color: #87CEEB;
     color: #000;
@@ -21,48 +15,12 @@ header {
     background-color: #fff;
     overflow: hidden;
 }
-.avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.avatar svg {
+.avatar img, .avatar svg {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%; /* 确保SVG图片也被裁剪为圆形 */
 }
-
-.section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.section li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.section li img,
-.section li svg {
-    margin-right: 8px;
-    width: 24px;
-    height: 24px;
-}
-
-.section li a {
-    color: black;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.section li a:hover {
-    color: dodgerblue; /* 悬停时的颜色 */
-}
-
 nav {
     display: flex;
     justify-content: center;
@@ -88,27 +46,7 @@ nav a:hover {
         text-align: center;
     }
 }
-.container {
-    min-height: calc(100vh - 100px); /* 确保内容区域足够高 */
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* 确保容器宽度为百分比 */
-    background: linear-gradient(to bottom right, #FFFACD, #FFFFFF); /* 浅黄色到白色的渐进背景 */
-    box-sizing: border-box; /* 总是将padding和border计算在内 */
-}
-.post {
-    background: #fff;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.post h2 {
-    margin-top: 0;
-}
-.post p {
-    line-height: 1.6;
-}
+
 footer {
     text-align: center;
     padding: 1em 0;
@@ -147,23 +85,19 @@ footer li {
     white-space: nowrap; /* 防止内容换行 */
 }
 footer a {
-    color: #fff; /* 改为亮白色 */ !important
+    color: #fff; /* 改为亮白色 */
     font-size: 1.2em;
     text-decoration: none;
     display: flex;
     align-items: center;
     font-weight: bold; /* 添加这一行 */
 }
-
 footer a:hover {
     color: #3498DB; /* 链接悬停颜色 */
 }
-
 footer a img {
     margin-right: 5px; /* 调整图标和文本之间的间距 */
 }
-
-/* 似乎根部最下面还有这些信息  和网页最下面还有部分空白 */
 footer .copyright {
     font-size: 0.8em;
     width: 100%;
@@ -172,17 +106,7 @@ footer .copyright {
     padding-top: 0px;
     border-top: 1px solid #444;
 }
-
-
-/* 响应式设计 */
 @media (max-width: 768px) {
-    nav a {
-        font-size: 1em;
-        padding: 10px 15px;
-    }
-    .container {
-        width: 95%;
-    }
     footer {
         flex-direction: column;
         align-items: center;
@@ -196,4 +120,18 @@ footer .copyright {
         margin-top: 10px;
         padding-top: 5px;
     }
+}
+
+html,body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    min-height: calc(100vh - 100px); /* 确保内容区域足够高 */
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* 确保容器宽度为百分比 */
+    box-sizing: border-box; /* 总是将padding和border计算在内 */
 }

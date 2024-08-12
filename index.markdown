@@ -8,22 +8,77 @@ title: 首页
 ---
 
 <div class="container">
-    <div id="home" class="post">
-        <h2>欢迎来到我的博客</h2>
-        <p>这是我的个人博客，我会在这里分享我的生活、工作和学习心得。</p>
-    </div>
-    <div id="about" class="post">
-        <h2>关于我</h2>
-        <p>我是一个热爱编程和旅行的开发者。我喜欢探索新技术，也喜欢在旅途中寻找灵感。</p>
-    </div>
-    <div id="contact" class="post">
-        <h2>联系我</h2>
-        <p>如果你有任何问题或建议，欢迎通过以下方式联系我：</p>
-        <ul>
-            <li>QQ: 1401914944</li>
-            <li>Phone: 16681562141</li>
-            <li>Github: XiaoYu43002@github.com</li>
-            <li>Email: yl1401914944@163.com</li>
-        </ul>
-    </div>
+    <a href="/blog/" class="post">
+        <div class="content">
+            <h2>我的博客</h2>
+            <p>欢迎来到我的博客！在这里，我将分享我的生活点滴、工作心得以及编程世界的探索。</p>
+        </div>
+    </a>
+
+    <a href="/learning/" class="post">
+        <div class="content">
+            <h2>学习心得</h2>
+            <p>我将分享我在学习过程中积累的经验与心得，包括编程技巧、工具使用以及职业发展。</p>
+        </div>
+    </a>
+
+    <a href="/systematic-learning/" class="post">
+        <div class="content">
+            <h2>系统学习</h2>
+            <p>系统学习是我提升自己的方法之一。我会将我的学习方法、学习资源整理在这里供大家参考。</p>
+        </div>
+    </a>
+
+    <a href="/about/" class="post">
+        <div class="content">
+            <h2>关于我</h2>
+            <p>我是一个热爱编程和旅行的开发者。我喜欢探索新技术，也喜欢在旅途中寻找灵感。</p>
+        </div>
+    </a>
 </div>
+
+<style>
+/* 容器样式 */
+/* 容器样式 */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom right, #FFFACD, #FFFFFF); /* 浅黄色到白色的渐进背景 */
+    border-radius: 15px; /* 确保容器本身也有圆角效果 */
+}
+
+/* 模块样式 */
+.post {
+    background: #fff;
+    margin: 10px;
+    flex: 1 1 calc(48% - 20px); /* 每个模块占据48%宽度，减去margin */
+    border-radius: 15px; /* 四角半圆 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none; /* 移除默认链接下划线 */
+    color: inherit;
+    display: block;
+    overflow: hidden; /* 确保内容被正确裁剪 */
+}
+
+/* 模块内的内容样式 */
+.post .content {
+    padding: 20px;
+}
+
+/* 保证等高 */
+.container .post {
+    min-height: 200px; /* 根据需要调整高度 */
+}
+
+@media (max-width: 768px) {
+    .post {
+        flex: 1 1 calc(100% - 20px); /* 移动设备上模块占据全宽 */
+        margin-bottom: 20px;
+    }
+}
+</style>
