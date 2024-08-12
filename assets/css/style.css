@@ -94,7 +94,7 @@ nav a:hover {
     flex-direction: column;
     width: 100%; /* 确保容器宽度为百分比 */
     background: linear-gradient(to bottom right, #FFFACD, #FFFFFF); /* 浅黄色到白色的渐进背景 */
-    box-sizing: border-box; /* 总是将padding和border计算在内 */
+    margin: 0 auto; /* 居中对齐，避免两侧过多空白 */    box-sizing: border-box; /* 总是将padding和border计算在内 */
 }
 .post {
     background: #fff;

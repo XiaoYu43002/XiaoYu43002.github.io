@@ -4,92 +4,114 @@ title: 职业经历
 permalink: /professional/
 ---
 
-<!--   permalink: /professional/ -- 自定义url结构 -->
+<style>
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        perspective: 1200px;
+        position: relative;
+    }
+    .carousel {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-style: preserve-3d;
+        transition: transform 0.5s ease;
+    }
+    .card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width: 300px;
+        height: 400px;
+        flex-shrink: 0;
+        text-align: left;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 0.5s ease;
+    }
+    .card.active {
+        transform: translateX(0) scale(1.2) translateZ(0);
+        z-index: 2;
+    }
+    .card.left {
+        transform: translateX(-350px) scale(0.8) translateZ(-200px);
+        z-index: 1;
+    }
+    .card.right {
+        transform: translateX(350px) scale(0.8) translateZ(-200px);
+        z-index: 1;
+    }
+    .card .info p {
+        font-size: 1.4rem;
+        margin: 0 0 10px 0; /* 调整下方的间距 */
+        font-weight: bold;
+    }
+    .card .info p span {
+        font-weight: normal;
+    }
+    .card .project-details h2 {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: 0px 0 5px 0; /* 增加上方的间距，使其与上部分保持一致 */
+    }
+    .card .project-details p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin: 0 0 10px 0; /* 统一下方的间距 */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* 限制行数为4行 */
+        -webkit-box-orient: vertical;
+    }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>职业经历</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+    /* 响应式设计 */
+    @media (max-width: 768px) {
         .container {
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-            perspective: 1200px;
-            position: relative;
+            height: auto;
+            flex-direction: column;
         }
         .carousel {
-            position: relative;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transform-style: preserve-3d;
-            transition: transform 0.5s ease;
+            flex-direction: column;
+            transform: none;
         }
         .card {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            width: 300px;
-            height: 400px;
-            flex-shrink: 0;
-            text-align: left;
-            position: absolute;
-            transform-style: preserve-3d;
-            transition: transform 0.5s ease;
+            position: relative;
+            width: 90%;
+            height: auto;
+            margin-bottom: 20px;
+            transform: none;
+            box-shadow: none;
         }
         .card.active {
-            transform: translateX(0) scale(1.2) translateZ(0);
-            z-index: 2;
-        }
-        .card.left {
-            transform: translateX(-350px) scale(0.8) translateZ(-200px);
+            transform: none;
             z-index: 1;
+            scale: 1;
         }
-        .card.right {
-            transform: translateX(350px) scale(0.8) translateZ(-200px);
-            z-index: 1;
+        .card.left, .card.right {
+            display: none;
         }
         .card .info p {
-            font-size: 1.4rem;
-            margin: 0 0 10px 0; /* 调整下方的间距 */
-            font-weight: bold;
-        }
-
-        .card .info p span {
-            font-weight: normal;
-        }
-
-        .card .project-details h2 {
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin: 0px 0 5px 0; /* 增加上方的间距，使其与上部分保持一致 */
-        }
-
-        .card .project-details p {
             font-size: 1.2rem;
-            line-height: 1.6;
-            margin: 0 0 10px 0; /* 统一下方的间距 */
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 4; /* 限制行数为4行 */
-            -webkit-box-orient: vertical;
         }
-    </style>
-</head>
-<body>
+        .card .project-details h2 {
+            font-size: 1.2rem;
+        }
+        .card .project-details p {
+            font-size: 1rem;
+            -webkit-line-clamp: 3; /* 限制行数为3行 */
+        }
+    }
+</style>
+
 <div class="container">
     <div class="carousel">
         <div class="card left" onclick="moveCarousel(0)">
@@ -143,28 +165,26 @@ permalink: /professional/
     </div>
 </div>
 
-    <script>
-        let currentIndex = 1;
+<script>
+    let currentIndex = 1;
 
-        function moveCarousel(index) {
-            const cards = document.querySelectorAll('.card');
-            const totalCards = cards.length;
+    function moveCarousel(index) {
+        const cards = document.querySelectorAll('.card');
+        const totalCards = cards.length;
 
-            // 更新 currentIndex
-            currentIndex = index;
+        // 更新 currentIndex
+        currentIndex = index;
 
-            cards.forEach((card, i) => {
-                card.classList.remove('active', 'left', 'right');
+        cards.forEach((card, i) => {
+            card.classList.remove('active', 'left', 'right');
 
-                if (i === currentIndex) {
-                    card.classList.add('active');
-                } else if (i === (currentIndex - 1 + totalCards) % totalCards) {
-                    card.classList.add('left');
-                } else if (i === (currentIndex + 1) % totalCards) {
-                    card.classList.add('right');
-                }
-            });
-        }
-    </script>
-</body>
-
+            if (i === currentIndex) {
+                card.classList.add('active');
+            } else if (i === (currentIndex - 1 + totalCards) % totalCards) {
+                card.classList.add('left');
+            } else if (i === (currentIndex + 1) % totalCards) {
+                card.classList.add('right');
+            }
+        });
+    }
+</script>
