@@ -88,7 +88,8 @@ permalink: /professional/
             height: auto;
             flex-direction: column;
             justify-content: flex-start;
-            align-items: stretch;
+            align-items: center; /* 确保卡片居中显示 */
+            padding: 20px 0;
         }
         .carousel {
             flex-direction: column;
@@ -98,22 +99,19 @@ permalink: /professional/
         }
         .card {
             position: relative;
-            width: 90%;
-            height: auto;
-            margin: 10px 0;
+            width: 90%; /* 控制卡片宽度以适应手机屏幕 */
+            height: 400px; /* 固定卡片高度 */
+            margin: 10px 0; /* 设置卡片间的等距间隙 */
             transform: none;
             box-shadow: none;
+            order: 0;
         }
         /* 调整卡片顺序，将中间卡片展示为第一个 */
         .card.active {
-            order: -1;
-            transform: none;
-            z-index: 1;
-            scale: 1;
+            order: -1; /* 将中间卡片排在第一个 */
         }
         .card.left, .card.right {
-            order: 0;
-            display: block;
+            order: 0; /* 将左右卡片排列在下方 */
         }
         .card .info p {
             font-size: 1.2rem;
@@ -126,6 +124,7 @@ permalink: /professional/
             -webkit-line-clamp: 3; /* 限制行数为3行 */
         }
     }
+
 </style>
 
 <div class="container">
