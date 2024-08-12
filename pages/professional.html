@@ -6,15 +6,16 @@ permalink: /professional/
 
 <style>
     .container {
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 80vh;
-        perspective: 1200px;
-        position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    perspective: 1200px;
+    position: relative;
     }
+
     .carousel {
         position: relative;
         width: 100%;
@@ -24,11 +25,12 @@ permalink: /professional/
         transform-style: preserve-3d;
         transition: transform 0.5s ease;
     }
+
     .card {
         background: #fff;
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         width: 300px;
         height: 400px;
         flex-shrink: 0;
@@ -37,31 +39,38 @@ permalink: /professional/
         transform-style: preserve-3d;
         transition: transform 0.5s ease;
     }
+
     .card.active {
         transform: translateX(0) scale(1.2) translateZ(0);
         z-index: 2;
     }
+
     .card.left {
         transform: translateX(-350px) scale(0.8) translateZ(-200px);
         z-index: 1;
     }
+
     .card.right {
         transform: translateX(350px) scale(0.8) translateZ(-200px);
         z-index: 1;
     }
+
     .card .info p {
         font-size: 1.4rem;
         margin: 0 0 10px 0; /* 调整下方的间距 */
         font-weight: bold;
     }
+
     .card .info p span {
         font-weight: normal;
     }
+
     .card .project-details h2 {
         font-size: 1.4rem;
         font-weight: bold;
         margin: 0px 0 5px 0; /* 增加上方的间距，使其与上部分保持一致 */
     }
+
     .card .project-details p {
         font-size: 1.2rem;
         line-height: 1.6;
@@ -78,26 +87,33 @@ permalink: /professional/
         .container {
             height: auto;
             flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
         }
         .carousel {
             flex-direction: column;
+            align-items: center;
             transform: none;
+            width: 100%;
         }
         .card {
             position: relative;
             width: 90%;
             height: auto;
-            margin-bottom: 20px;
+            margin: 10px 0;
             transform: none;
             box-shadow: none;
         }
+        /* 调整卡片顺序，将中间卡片展示为第一个 */
         .card.active {
+            order: -1;
             transform: none;
             z-index: 1;
             scale: 1;
         }
         .card.left, .card.right {
-            display: none;
+            order: 0;
+            display: block;
         }
         .card .info p {
             font-size: 1.2rem;
