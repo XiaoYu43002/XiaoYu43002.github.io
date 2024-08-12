@@ -54,7 +54,7 @@ header {
 }
 
 .section li a {
-    color: #333;
+    color: black;
     text-decoration: none;
     font-size: 1rem;
 }
@@ -99,7 +99,7 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 1em 0;
-    background-color: #BDC3C7;
+    background-color: #444;
     color: black;
     display: flex;
     justify-content: space-around;
@@ -134,7 +134,8 @@ footer li {
     white-space: nowrap; /* 防止内容换行 */
 }
 footer a {
-    color: black;
+    color: #fff; /* 改为亮白色 */ !important
+    font-size: 1.2em;
     text-decoration: none;
     display: flex;
     align-items: center;
