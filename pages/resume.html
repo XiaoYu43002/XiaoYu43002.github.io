@@ -1,0 +1,151 @@
+---
+layout: default
+title: 个人简历
+permalink: /resume/
+---
+
+<div class="resume-container">
+    <div class="resume-left">
+        <div class="profile-picture">
+            <img src="{{ site.baseurl }}/assets/images/personal.jpg" alt="个人照片">
+        </div>
+        <div class="personal-info">
+            <p><strong>姓名:</strong><span class="right-align">肖玉林</span></p>
+            <p><strong>性别:</strong><span class="right-align">男</span></p>
+            <p><strong>年龄:</strong><span class="right-align">22</span></p>
+            <p><strong>籍贯:</strong><span class="right-align">湖南省邵阳市</span></p>
+            <p><strong>毕业院校:</strong><span class="right-align">湖南农业大学</span></p>
+            <p><strong>就读专业:</strong><span class="right-align">生物信息学</span></p>
+            <p><strong>工作年限:</strong><span class="right-align">2.5年</span></p>
+        </div>
+    </div>
+    <div class="resume-right">
+        <div class="experience-section">
+            <h2>校园经历</h2>
+            <p>在校期间成绩优异，喜欢在课余时间进行学习和摸索，参加过众多比赛，曾获得湖南省大学生数学建模竞赛省奖；在20-22年期间担任班级学委，担任学委期间沟通以及理解能力均得到了很大的提升，能够顺利和老师，同学，辅导员之间进行沟通，完成、分配、组织学院下发的任务；此外在19-21年之间担任校勤工助学部外交部部长，多次为校勤工吸收和接纳工作机会对接以及拉取活动的赞助，如校园助力回家行，百团大会战等。</p>
+        </div>
+        <div class="experience-section">
+            <h2>项目经历</h2>
+            <p>在此添加你的项目经历。</p>
+        </div>
+        <div class="experience-section">
+            <h2>职业规划</h2>
+            <p>我希望能够在五年内成为一名高级生信分析工程师：在这里需要先澄清一个概念，那就是生信分析中有工程师一说和搬运工一说。生信搬运工故名思意就是搬运各种生信分析工具，然后加以利用，可能还需要个裁缝的功能，这样就能达到所想要的结果，但是这样的很局限。而生信分析工程师所要做的不同，生信分析工程师不仅是针对数据，以及所想要解决的问题都需要有着很深刻的理解，是根据所要解决的问题，去思考要怎办解决，用什么方法解决，达到什么结果的，需要许多的文献经验和项目经验的积累。因此，尽管现在还是一名生信搬运工，但我希望五年内能成为一名生信工程师。可以解决一些临床问题，可以深刻地理解文献中的原理</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .resume-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .resume-left {
+        background: linear-gradient(to bottom, #87CEEB, #e0f7fa);
+        color: #000;
+        padding: 20px;
+        flex: 1;
+        box-sizing: border-box;
+        border-radius: 0;
+        width: 33.33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .resume-right {
+        background-color: #FFFACD;
+        color: #000;
+        padding: 20px;
+        flex: 2;
+        box-sizing: border-box;
+        border-radius: 0;
+        width: 66.66%;
+    }
+    .experience-section {
+        height: 220px; /* 固定高度 */
+        border: 1px solid #ccc; /* 可选：添加边框以便查看 */
+        margin: it 0px auto 30px; /* 上边距40px，下边距20px，水平居中 */
+        border-radius: 10px; /* 边框为圆角 */
+        width: 95%; /* 可选：设置宽度以便更好地居中 */
+        line-height: 1.5;
+        padding: 20px;
+        font-size: 18px;
+    }
+    .profile-picture {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .profile-picture img {
+        width: 150px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 2px solid #fff;
+    }
+
+    .personal-info p {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0; /* 减小上下间距 */
+        font-size: 1.1em;
+        text-align: left;
+        flex-wrap: nowrap; /* 防止内容换行 */
+    }
+
+    .personal-info strong {
+        flex: 0 0 85px; /* 增加左侧固定宽度 */
+        text-align: left;
+    }
+
+    .personal-info .right-align {
+        flex: 0 0 100px; /* 右侧部分自适应宽度 */
+        text-align: left; /* 左对齐 */
+        margin-left: 3px; /* 减少与冒号的间距 */
+        white-space: nowrap; /* 防止右侧内容换行 */
+    }
+
+    @media (max-width: 768px) {
+        .resume-container {
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+        }
+
+        .resume-left, .resume-right {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .profile-picture img {
+            width: 120px;
+            height: 160px;
+        }
+
+        .personal-info p {
+            text-align: center;
+        }
+
+        .personal-info strong {
+            text-align: left;
+            flex: initial;
+        }
+
+        .personal-info .right-align {
+            text-align: center;
+            margin-left: 0;
+        }
+    }
+
+</style>
