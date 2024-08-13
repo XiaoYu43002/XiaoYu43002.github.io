@@ -4,7 +4,7 @@ title: 个人简历
 permalink: /resume/
 ---
 
-<div class="resume-container">
+<div class="resume-container" id="resume-content" style="display: none;">
     <div class="resume-left">
         <div class="profile-picture">
             <img src="{{ site.baseurl }}/assets/images/personal.jpg" alt="个人照片">
@@ -169,3 +169,16 @@ permalink: /resume/
     }
 
 </style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const correctPassword = "xyl123"; // 设置你的密码
+        const passwordPrompt = prompt("请输入阅读密码:");
+
+        if (passwordPrompt === correctPassword) {
+            document.getElementById("resume-content").style.display = "flex";
+        } else {
+            alert("密码错误，请重试或联系管理员。");
+        }
+    });
+</script>
