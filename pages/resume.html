@@ -24,13 +24,15 @@ permalink: /resume/
             <h2>校园经历</h2>
             <p>在校期间成绩优异，喜欢在课余时间进行学习和摸索，参加过众多比赛，曾获得湖南省大学生数学建模竞赛省奖；在20-22年期间担任班级学委，担任学委期间沟通以及理解能力均得到了很大的提升，能够顺利和老师，同学，辅导员之间进行沟通，完成、分配、组织学院下发的任务；此外在19-21年之间担任校勤工助学部外交部部长，多次为校勤工吸收和接纳工作机会对接以及拉取活动的赞助，如校园助力回家行，百团大会战等。</p>
         </div>
-        <div class="experience-section">
-            <h2>项目经历</h2>
-            <p>在此添加你的项目经历。</p>
-        </div>
+        <a href="/project_experience/" style="display: block; text-decoration: none; color: inherit;">
+            <div class="experience-section">
+                <h2>项目经历</h2>
+                <p>在校期间参与过大学生数学建模竞赛，做过乙醇偶合制备 C4 烯烃的项目；在老师实验室参与过GWAS在枣类性别决定基因性状的关联分析，探究与性别表型显著关联的SNP位点；21年下学期开始外出实习，23年毕业至今还做过一项基于生物信息学的项目，比如探究抗药基因和药物之间的关系，发现生物标志物，开发用于临床检测的预后模型；做过转录组分析项目负责人，开发完整的转录组分析流程，开发有关突变位点的分析工具，可变剪切分析；独立负责eccDNA环状DNA分子的CNV,SV分析，肿瘤突变位点的分析项目等。</p>
+            </div>
+        </a>
         <div class="experience-section">
             <h2>职业规划</h2>
-            <p>我希望能够在五年内成为一名高级生信分析工程师：在这里需要先澄清一个概念，那就是生信分析中有工程师一说和搬运工一说。生信搬运工故名思意就是搬运各种生信分析工具，然后加以利用，可能还需要个裁缝的功能，这样就能达到所想要的结果，但是这样的很局限。而生信分析工程师所要做的不同，生信分析工程师不仅是针对数据，以及所想要解决的问题都需要有着很深刻的理解，是根据所要解决的问题，去思考要怎办解决，用什么方法解决，达到什么结果的，需要许多的文献经验和项目经验的积累。因此，尽管现在还是一名生信搬运工，但我希望五年内能成为一名生信工程师。可以解决一些临床问题，可以深刻地理解文献中的原理</p>
+            <p>我希望能够在五年内成为一名高级生信分析工程师：在这里需要先澄清一个概念，那就是生信分析中有工程师一说和搬运工一说。生信搬运工故名思意就是搬运各种生信分析工具，然后加以利用，可能还需要个裁缝的功能，这样就能达到所想要的结果，但是这样的很局限。而生信分析工程师所要做的不同，生信分析工程师不仅是针对数据，以及所想要解决的问题都需要有着很深刻的理解，是根据所要解决的问题，去思考要怎办解决，用什么方法解决，达到什么结果的，需要许多的文献经验和项目经验的积累。因此，尽管现在还是一名生信搬运工，但我希望五年内能成为一名生信工程师。可以解决一些临床问题，可以深刻地理解文献中的原理。目前我也深知随着AI技术的普及，生信分析会逐渐流程话和自动化，但是对于生信分析方面还有一些环节我认为是必不可少的，所以我希望能努力发展成为一名高级生信分析工程师。</p>
         </div>
     </div>
 </div>
@@ -38,12 +40,13 @@ permalink: /resume/
 <style>
     .resume-container {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: stretch;
-        height: 100vh;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        min-height: 100vh; /* 确保容器占满页面高度 */
     }
 
     .resume-left {
@@ -52,12 +55,10 @@ permalink: /resume/
         padding: 20px;
         flex: 1;
         box-sizing: border-box;
-        border-radius: 0;
-        width: 33.33%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: center; /* 垂直居中 */
         text-align: center;
     }
 
@@ -68,21 +69,29 @@ permalink: /resume/
         flex: 2;
         box-sizing: border-box;
         border-radius: 0;
-        width: 66.66%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
+
     .experience-section {
-        height: 220px; /* 固定高度 */
-        border: 1px solid #ccc; /* 可选：添加边框以便查看 */
-        margin: it 0px auto 30px; /* 上边距40px，下边距20px，水平居中 */
-        border-radius: 10px; /* 边框为圆角 */
-        width: 95%; /* 可选：设置宽度以便更好地居中 */
-        line-height: 1.5;
-        padding: 20px;
-        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-bottom: 20px; /* 减小上下间距 */
+        padding: 15px;
+        font-size: 1em;
+        line-height: 1.6;
+        height: auto; /* 高度自动调整 */
+        flex: 1; /* 使每个 section 在可用空间中平均分布 */
     }
+
+    .experience-section h2 {
+        margin-top: 0;
+    }
+
     .profile-picture {
         text-align: center;
-        margin-bottom: 25px;
+        margin-bottom: 15px; /* 减小照片和信息之间的间隙 */
     }
 
     .profile-picture img {
@@ -93,25 +102,28 @@ permalink: /resume/
         border: 2px solid #fff;
     }
 
+    .personal-info {
+        text-align: left;
+    }
+
     .personal-info p {
         display: flex;
         justify-content: space-between;
         margin: 5px 0; /* 减小上下间距 */
-        font-size: 1.1em;
-        text-align: left;
-        flex-wrap: nowrap; /* 防止内容换行 */
+        font-size: 1em;
+        flex-wrap: nowrap;
     }
 
     .personal-info strong {
-        flex: 0 0 85px; /* 增加左侧固定宽度 */
+        flex: 0 0 85px;
         text-align: left;
     }
 
     .personal-info .right-align {
-        flex: 0 0 100px; /* 右侧部分自适应宽度 */
-        text-align: left; /* 左对齐 */
-        margin-left: 3px; /* 减少与冒号的间距 */
-        white-space: nowrap; /* 防止右侧内容换行 */
+        flex: 1;
+        text-align: left;
+        margin-left: 3px;
+        white-space: nowrap;
     }
 
     @media (max-width: 768px) {
@@ -126,6 +138,14 @@ permalink: /resume/
             padding: 10px;
             margin-bottom: 10px;
             text-align: center;
+        }
+
+        .resume-left {
+            justify-content: center; /* 确保在移动设备上垂直居中 */
+        }
+
+        .experience-section {
+            width: 100%; /* 确保内容在移动设备上占满宽度 */
         }
 
         .profile-picture img {
