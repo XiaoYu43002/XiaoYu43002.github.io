@@ -1,0 +1,169 @@
+---
+layout: default
+title: 项目展示
+permalink: /projects/
+---
+
+<div class="project-container">
+    <div class="project">
+        <h2><a href="{{ site.baseurl }}/2023/12/24/transcriptome-analysis.html">项目名称： 转录组分析</a></h2>
+        <p><strong>担任角色：</strong> 负责人</p>
+        <p><strong>项目介绍：</strong> 转录组分析主要是探究...</p>
+        <p>具体工作内容：这里是更详细的工作内容描述。内容会在用户点击后展开。</p>
+    </div>
+    <div class="project">
+        <h2><a href="{{ site.baseurl }}/2024/04/30/Tumor-Biomarker-Prediction-Analysis.html">项目名称：肿瘤生物标志物预测与预后分析</a></h2>
+        <p><strong>担任角色：</strong> 负责人</p>
+        <p><strong>项目介绍：</strong> 主要负责公共数据库的挖掘与分析，构建模型预测肿瘤预后。</p>
+        <p>具体工作内容：这里是更详细的工作内容描述。内容会在用户点击后展开。</p>
+    </div>
+    <div class="project">
+        <h2>项目名称： 转录组分析</h2>
+        <p><strong>担任角色：</strong> 负责人</p>
+        <p><strong>项目介绍：</strong> 转录组分析主要是探究...</p>
+        <p>具体工作内容：这里是更详细的工作内容描述。内容会在用户点击后展开。</p>
+    </div>
+    <div class="project">
+        <h2>项目名称： 转录组分析</h2>
+        <p><strong>担任角色：</strong> 负责人</p>
+        <p><strong>项目介绍：</strong> 转录组分析主要是探究...</p>
+        <p>具体工作内容：这里是更详细的工作内容描述。内容会在用户点击后展开。</p>
+    </div>
+    <div class="project">
+        <h2>项目名称： 转录组分析</h2>
+        <p><strong>担任角色：</strong> 负责人</p>
+        <p><strong>项目介绍：</strong> 转录组分析主要是探究...</p>
+        <p>具体工作内容：这里是更详细的工作内容描述。内容会在用户点击后展开。</p>
+    </div>
+    <div class="project">
+        <h2>项目名称： 转录组分析</h2>
+        <p><strong>担任角色：</strong> 负责人</p>
+        <p><strong>项目介绍：</strong> 转录组分析主要是探究...</p>
+        <p>具体工作内容：这里是更详细的工作内容描述。内容会在用户点击后展开。</p>
+    </div>
+    <!-- 其他项目内容类似 -->
+</div>
+
+<div class="pagination">
+    <button id="prevPage">上一页</button>
+    <button id="nextPage">下一页</button>
+</div>
+
+<style>
+/* 项目卡片容器样式 */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px; /* 给容器增加外边距，确保与浏览器边框有空隙 */
+}
+
+/* 项目卡片样式 */
+.project {
+    background-color: #FFFACD;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(33.33% - 20px); /* 三个项目并排显示，中间和边缘各有10px间隙 */
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+/* 项目标题样式 */
+.project h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* 链接颜色设置 */
+.project a {
+    color: inherit; /* 继承父元素的颜色 */
+    text-decoration: none; /* 去掉下划线 */
+}
+
+.project a:hover {
+    color: inherit; /* 保持悬停时颜色不变 */
+    text-decoration: underline; /* 悬停时可以加下划线或其他效果 */
+}
+
+
+/* 项目描述文本样式 */
+.project p {
+    margin: 5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 最多展示2行 */
+    -webkit-box-orient: vertical;
+}
+
+/* 分页按钮样式 */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.pagination button {
+    background-color: #87CEEB;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button:hover {
+    background-color: #4682B4;
+}
+
+/* 响应式设计：在小屏幕设备上，项目卡片宽度调整为100% */
+@media (max-width: 768px) {
+    .project {
+        width: 100%;
+        margin-bottom: 20px; /* 确保在小屏幕设备上项目之间有足够的间隙 */
+    }
+}
+</style>
+
+<script>
+const projectsPerPage = 6;
+let currentPage = 1;
+const projects = document.querySelectorAll('.project');
+const totalPages = Math.ceil(projects.length / projectsPerPage);
+
+function showPage(page) {
+    projects.forEach((project, index) => {
+        project.style.display = (index >= (page - 1) * projectsPerPage && index < page * projectsPerPage) ? 'block' : 'none';
+    });
+}
+
+function nextPage() {
+    if (currentPage < totalPages) {
+        currentPage++;
+        showPage(currentPage);
+    }
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        showPage(currentPage);
+    }
+}
+
+document.querySelector('#nextPage').addEventListener('click', nextPage);
+document.querySelector('#prevPage').addEventListener('click', prevPage);
+
+showPage(currentPage);
+</script>
