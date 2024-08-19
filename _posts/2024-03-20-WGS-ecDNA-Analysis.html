@@ -1,0 +1,252 @@
+---
+layout: default
+title: WGS-ecDNA分析项目
+---
+
+<div class="container">
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <h3>文章目录</h3>
+            <ul>
+                <li><a href="#section1">项目概述</a></li>
+                <li>
+                    <a href="#section2" class="toggle">主要职责 <span class="arrow">&#9660;</span></a>
+                    <ul class="sub-menu">
+                        <li><a href="#subsection1">数据质控与预处理</a></li>
+                        <li><a href="#subsection2">变异检测</a></li>
+                        <li><a href="#subsection3">拷贝数变异（CNV）检测</a></li>
+                        <li><a href="#subsection4">染色体外环状DNA（ecDNA）分析</a></li>
+                        <li><a href="#subsection5">突变特征分析</a></li>
+                        <li><a href="#subsection6">驱动基因分析</a></li>
+                        <li><a href="#subsection7">差异基因分析</a></li>
+                    </ul>
+                </li>
+                <li><a href="#section3">使用工具与技术</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <h1 class="main-title">WGS-ecDNA分析项目</h1>
+        <div id="section1" class="section">
+            <h2>项目概述</h2>
+            <p>本项目的主要目标是对小鼠肝癌Hepa1-6细胞株进行全基因组测序，并分析染色体外环状DNA（ecDNA）及其他基因组变异，包括SNP、InDel、CNV等。项目中涉及多种生物信息学分析流程及工具的使用，以确保数据的准确性和分析结果的可靠性。</p>
+        </div>
+
+        <div id="section2" class="section">
+            <h2>主要职责</h2>
+            <div id="subsection1" class="sub-section">
+                <h3>数据质控与预处理</h3>
+                <ul>
+                    <li>使用Illumina Hiseq/MiniSeq平台获取的双端测序数据，进行数据质控。</li>
+                    <li>使用Fastp工具对原始数据（Raw reads）进行拼接、过滤和质控，生成高质量的Clean reads。</li>
+                </ul>
+            </div>
+            <div id="subsection2" class="sub-section">
+                <h3>变异检测</h3>
+                <ul>
+                    <li>使用FreeBayes软件进行SNP和InDel的检测。</li>
+                    <li>使用ANNOVAR软件对检测到的变异进行注释分析，将其与外部数据库进行比对。</li>
+                </ul>
+            </div>
+            <div id="subsection3" class="sub-section">
+                <h3>拷贝数变异（CNV）检测</h3>
+                <ul>
+                    <li>使用Cnvkit对肿瘤样本进行CNV检测，分析基因组拷贝数的增减情况。</li>
+                    <li>生成并分析CNV在染色体上的分布图和热图，了解肿瘤样本中重要的结构变异特征。</li>
+                </ul>
+            </div>
+            <div id="subsection4" class="sub-section">
+                <h3>染色体外环状DNA（ecDNA）分析</h3>
+                <ul>
+                    <li>使用专门的分析工具对ecDNA进行检测，确定其在染色体上的分布位置及起始位点。</li>
+                    <li>通过分析ecDNA的产生机制，研究其在癌症发展中的作用。</li>
+                </ul>
+            </div>
+            <div id="subsection5" class="sub-section">
+                <h3>突变特征分析</h3>
+                <ul>
+                    <li>进行突变频谱（Mutation Spectrum）和突变特征（Mutation Signature）的分析，了解肿瘤样本中的突变模式。</li>
+                    <li>使用NMF算法对突变特征进行聚类分析，并与COSMIC数据库中的已知特征进行比对。</li>
+                </ul>
+            </div>
+            <div id="subsection6" class="sub-section">
+                <h3>驱动基因分析</h3>
+                <ul>
+                    <li>使用多种数据库（如CGC、MDG125、OncoKB等）进行驱动基因的注释和聚类分析，识别肿瘤样本中的关键驱动基因。</li>
+                </ul>
+            </div>
+            <div id="subsection7" class="sub-section">
+                <h3>差异基因分析</h3>
+                <ul>
+                    <li>使用Maftools软件进行差异基因分析，识别在抗药组肿瘤样本中突变频率较高的基因。</li>
+                    <li>通过Venn图和Pfam结构域图对差异基因进行进一步分析和比较。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="section3" class="section">
+            <h2>使用工具与技术</h2>
+            <ul>
+                <li><strong>Fastp</strong>: 数据质控和预处理。</li>
+                <li><strong>FreeBayes</strong>: SNP和InDel检测。</li>
+                <li><strong>ANNOVAR</strong>: 基因组变异注释。</li>
+                <li><strong>Cnvkit</strong>: CNV检测和分析。</li>
+                <li><strong>NMF算法</strong>: 突变特征聚类分析。</li>
+                <li><strong>Maftools</strong>: 差异基因分析。</li>
+                <li><strong>R、Python</strong>: 数据处理与分析。</li>
+                <li><strong>Adobe Illustrator、GraphPad Prism</strong>: 数据可视化与图表制作。</li>
+            </ul>
+        </div>
+    </div>
+</div> <!-- 关闭 container 的 div -->
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .sidebar {
+        width: 20%;
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+        overflow-y: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sidebar-content {
+        text-align: center;
+    }
+
+    .sidebar h3 {
+        color: #fff;
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+        text-decoration: none;
+        color: #87CEEB;
+        font-size: 1.1em;
+        transition: color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+        text-decoration: underline;
+        color: #FFD700;
+    }
+
+    .sidebar ul li ul.sub-menu {
+        margin-top: 10px;
+        padding-left: 15px;
+        display: none;
+    }
+
+    .sidebar ul li ul.sub-menu.active {
+        display: block;
+    }
+
+    .content {
+        flex: 1;
+        padding-left: 40px;
+        border-left: 2px solid #ADD8E6;
+        padding-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .arrow {
+        display: inline-block;
+        margin-left: 5px;
+        transition: transform 0.3s;
+    }
+
+    .main-title {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        color: #333;
+        text-align: center;
+    }
+
+    .section {
+        margin-bottom: 50px;
+        width: 80%;
+    }
+
+    .section h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+        color: #333;
+        border-bottom: 2px solid #ADD8E6;
+        padding-bottom: 15px;
+    }
+
+    .section p,
+    .section ul {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #555;
+    }
+
+    .section ul {
+        padding-left: 20px;
+        list-style-type: disc;
+    }
+
+    .section ul li {
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+
+        .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+
+        .content {
+            padding-left: 20px;
+            border-left: none;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var toggles = document.querySelectorAll(".toggle");
+        toggles.forEach(function(toggle) {
+            toggle.addEventListener("click", function(event) {
+                event.preventDefault();
+                var subMenu = this.nextElementSibling;
+                subMenu.classList.toggle("active");
+                // 更新箭头方向
+                var arrow = this.querySelector(".arrow");
+                if (subMenu.classList.contains("active")) {
+                    arrow.style.transform = "rotate(-180deg)"; // 展开时箭头转向上
+                } else {
+                    arrow.style.transform = ""; // 收起时指向下
+                }
+            });
+        });
+    });
+</script>

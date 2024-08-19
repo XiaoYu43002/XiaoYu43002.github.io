@@ -1,0 +1,158 @@
+---
+layout: default
+title: GRF基因家族系统分析
+---
+
+<div class="container">
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <h3>文章目录</h3>
+            <ul>
+                <li><a href="#section1">工作内容简介</a></li>
+                <li><a href="#section2">主要职责</a></li>
+                <li><a href="#section3">技术技能掌握</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <h1 class="main-title">GRF基因家族系统分析</h1>
+        <div id="section1" class="section">
+            <h2>工作内容简介</h2>
+            <p>在本项目中，我主要负责禾本科作物14-3-3(GRF)基因家族的生物信息学分析。通过运用多种生物信息学工具，对基因家族的系统发育、基因结构、保守基序及染色体分布进行了详细研究，揭示了该基因家族在植物生长发育和胁迫反应中的潜在功能。</p>
+        </div>
+
+        <div id="section2" class="section">
+            <h2>主要职责</h2>
+            <ul>
+                <li>从公共数据库中提取水稻、高粱、小麦等禾本科作物的全基因组数据。</li>
+                <li>使用Hmmer、MEGA等工具对14-3-3(GRF)基因家族进行筛选和系统发育分析。</li>
+                <li>分析14-3-3(GRF)基因家族的理化性质、二级三级结构、基因结构及染色体分布。</li>
+            </ul>
+        </div>
+
+        <div id="section3" class="section">
+            <h2>技术技能掌握</h2>
+            <ul>
+                <li>精通基因家族鉴定方法，如Hmmer和Blast。</li>
+                <li>掌握系统发育树的构建与分析（MEGA、iTOL）。</li>
+                <li>熟悉基因结构、motif预测及染色体定位分析工具（Tbtools、MEME）。</li>
+                <li>具备扎实的基因组学和生物信息学分析能力，能够对基因家族的进化及功能进行深入解析。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        font-family: 'Arial', sans-serif; /* 更现代的字体 */
+    }
+
+    .sidebar {
+        width: 20%; /* 修改为占据1/5宽度 */
+        background-color: #333; /* 黑色背景 */
+        color: #fff; /* 白色字体 */
+        padding: 20px;
+        height: 100vh; /* 占满整个视窗高度 */
+        position: sticky;
+        top: 0;
+        overflow-y: auto; /* 当内容超出视窗高度时允许滚动 */
+        display: flex;
+        justify-content: center; /* 水平居中 */
+    }
+
+    .sidebar-content {
+        text-align: center; /* 内容居中 */
+    }
+
+    .sidebar h3 {
+        color: #fff;
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+        text-decoration: none;
+        color: #87CEEB; /* 链接颜色 */
+        font-size: 1.1em;
+        transition: color 0.3s; /* 悬停颜色变化 */
+    }
+
+    .sidebar ul li a:hover {
+        text-decoration: underline;
+        color: #FFD700; /* 悬停时颜色变化 */
+    }
+
+    .content {
+        flex: 1; /* 修改为占据剩余的4/5宽度 */
+        padding-left: 40px;
+        border-left: 2px solid #ADD8E6; /* 淡蓝色渐近线 */
+        padding-bottom: 50px; /* 增加底部padding */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 内容居中 */
+    }
+
+    .main-title {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        color: #333;
+        text-align: center; /* 标题居中 */
+    }
+
+    .section {
+        margin-bottom: 50px;
+        width: 80%; /* 段落宽度 */
+    }
+
+    .section h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+        color: #333;
+        border-bottom: 2px solid #ADD8E6; /* 标题和内容之间的淡蓝色渐近线 */
+        padding-bottom: 15px; /* 增加底部padding */
+    }
+
+    .section p,
+    .section ul {
+        font-size: 16px; /* 段落字体大小 */
+        line-height: 1.5; /* 段落行距 */
+        color: #555;
+    }
+
+    .section ul {
+        padding-left: 20px;
+        list-style-type: disc; /* 增加圆点符号 */
+    }
+
+    .section ul li {
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column; /* 移动端改为垂直布局 */
+        }
+
+        .sidebar {
+            width: 100%; /* 移动端占满宽度 */
+            height: auto; /* 高度自适应 */
+            position: relative; /* 取消sticky */
+        }
+
+        .content {
+            padding-left: 20px; /* 减少左边距 */
+            border-left: none; /* 移动端去掉左侧边线 */
+        }
+    }
+</style>

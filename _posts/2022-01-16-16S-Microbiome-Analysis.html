@@ -1,0 +1,161 @@
+---
+layout: default  
+title: 16S微生物群落分析
+---
+
+<div class="container">
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <h3>文章目录</h3>
+            <ul>
+                <li><a href="#section1">工作内容简介</a></li>
+                <li><a href="#section2">主要职责</a></li>
+                <li><a href="#section3">技术技能掌握</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <h1 class="main-title">16S微生物群落分析</h1>
+        <div id="section1" class="section">
+            <h2>工作内容简介</h2>
+            <p>作为负责本项目的生信分析工程师，我的主要任务是通过16S rRNA测序数据分析，探索肠道微生物群与肿瘤发生发展的关联性。具体工作包括从样本数据的质控、序列比对到微生物群落多样性分析和功能预测，为项目提供数据支持和生物信息学解读。</p>
+        </div>
+
+        <div id="section2" class="section">
+            <h2>主要职责</h2>
+            <ul>
+                <li><strong>数据质控与预处理</strong>：使用FastQC和Cutadapt等工具对测序数据进行质量控制和去除低质量序列，确保分析结果的准确性。</li>
+                <li><strong>序列比对与分类</strong>：利用QIIME2和DADA2进行序列比对和OTU/ASV分类，构建微生物群落的分类信息。</li>
+                <li><strong>多样性分析</strong>：计算Alpha和Beta多样性，评估微生物群落的丰富度、均匀度和结构差异。</li>
+                <li><strong>功能预测</strong>：通过PICRUSt2等工具对微生物群落的功能进行预测，探索潜在的生物学功能和代谢路径。</li>
+                <li><strong>数据可视化与报告撰写</strong>：生成丰富的图表和可视化数据，并撰写分析报告，为项目团队提供详尽的生物信息学解读。</li>
+            </ul>
+        </div>
+
+        <div id="section3" class="section">
+            <h2>技术技能掌握</h2>
+            <ul>
+                <li><strong>编程语言</strong>：熟练掌握Python、R，用于数据分析和可视化。</li>
+                <li><strong>生物信息学工具</strong>：熟悉QIIME2、DADA2、PICRUSt2等微生物群落分析工具，擅长使用FastQC、Cutadapt进行数据质控。</li>
+                <li><strong>统计分析</strong>：具备扎实的统计分析基础，能够使用R进行复杂数据的统计推断和可视化。</li>
+                <li><strong>Linux环境</strong>：能够在Linux环境下高效操作，熟悉Shell脚本编写，用于自动化分析流程。</li>
+                <li><strong>文档撰写与沟通</strong>：擅长撰写技术报告和项目总结，能够清晰地与团队成员沟通分析结果和数据解读。</li>
+            </ul>
+        </div>
+    </div>
+</div> <!-- 关闭内容的 div -->
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        font-family: 'Arial', sans-serif; /* 更现代的字体 */
+    }
+
+    .sidebar {
+        width: 20%; /* 修改为占据1/5宽度 */
+        background-color: #333; /* 黑色背景 */
+        color: #fff; /* 白色字体 */
+        padding: 20px;
+        height: 100vh; /* 占满整个视窗高度 */
+        position: sticky;
+        top: 0;
+        overflow-y: auto; /* 当内容超出视窗高度时允许滚动 */
+        display: flex;
+        justify-content: center; /* 水平居中 */
+    }
+
+    .sidebar-content {
+        text-align: center; /* 内容居中 */
+    }
+
+    .sidebar h3 {
+        color: #fff;
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+        text-decoration: none;
+        color: #87CEEB; /* 链接颜色 */
+        font-size: 1.1em;
+        transition: color 0.3s; /* 悬停颜色变化 */
+    }
+
+    .sidebar ul li a:hover {
+        text-decoration: underline;
+        color: #FFD700; /* 悬停时颜色变化 */
+    }
+
+    .content {
+        flex: 1; /* 修改为占据剩余的4/5宽度 */
+        padding-left: 40px;
+        border-left: 2px solid #ADD8E6; /* 淡蓝色渐近线 */
+        padding-bottom: 50px; /* 增加底部padding */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 内容居中 */
+    }
+
+    .main-title {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        color: #333;
+        text-align: center; /* 标题居中 */
+    }
+
+    .section {
+        margin-bottom: 50px;
+        width: 80%; /* 段落宽度 */
+    }
+
+    .section h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+        color: #333;
+        border-bottom: 2px solid #ADD8E6; /* 标题和内容之间的淡蓝色渐近线 */
+        padding-bottom: 15px; /* 增加底部padding */
+    }
+
+    .section p,
+    .section ul {
+        font-size: 16px; /* 段落字体大小 */
+        line-height: 1.5; /* 段落行距 */
+        color: #555;
+    }
+
+    .section ul {
+        padding-left: 20px;
+        list-style-type: disc; /* 增加圆点符号 */
+    }
+
+    .section ul li {
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column; /* 移动端改为垂直布局 */
+        }
+
+        .sidebar {
+            width: 100%; /* 移动端占满宽度 */
+            height: auto; /* 高度自适应 */
+            position: relative; /* 取消sticky */
+        }
+
+        .content {
+            padding-left: 20px; /* 减少左边距 */
+            border-left: none; /* 移动端去掉左侧边线 */
+        }
+    }
+</style>

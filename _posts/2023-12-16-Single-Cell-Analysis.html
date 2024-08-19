@@ -1,0 +1,164 @@
+---
+layout: default
+title: 单细胞分析
+---
+
+<div class="container">
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <h3>文章目录</h3>
+            <ul>
+                <li><a href="#section1">工作内容简介</a></li>
+                <li><a href="#section2">主要职责</a></li>
+                <li><a href="#section3">技术技能掌握</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <h1 class="main-title">单细胞分析</h1>
+        <div id="section1" class="section">
+            <h2>工作内容简介</h2>
+            <p>Single-RNAseq数据纯分析项目旨在利用单细胞转录组测序技术，提供精准的基因表达分析服务。分析流程涵盖从数据质控到基因表达定量，再到降维聚类和功能富集分析，最终生成详细的分析报告。</p>
+        </div>
+
+        <div id="section2" class="section">
+            <h2>主要职责</h2>
+            <ul>
+                <li>使用FastQC和MultiQC对测序数据进行严格的质量控制，确保高质量数据用于下游分析。</li>
+                <li>通过STAR进行参考基因组比对，并使用FeatureCounts统计比对结果。</li>
+                <li>使用Seurat建立多样本联合数据集并进行二次质控以提高数据质量。</li>
+                <li>利用PCA、t-SNE或UMAP进行数据降维与聚类分析，帮助可视化细胞之间的关系。</li>
+                <li>采用DESeq2进行差异基因分析，识别不同细胞群体的关键基因。</li>
+                <li>使用单细胞分析工具（如SingleR、CellMarker）鉴定细胞类型，并进行GO和KEGG通路的功能富集分析。</li>
+                <li>提供个性化的变异检测（SNPs、Indels）及基因调控网络分析（GENIE3）服务。</li>
+            </ul>
+        </div>
+
+        <div id="section3" class="section">
+            <h2>技术技能掌握</h2>
+            <ul>
+                <li>Linux环境下的数据分析与后台命令行操作熟练掌握（如Nohup、screen等）。</li>
+                <li>单细胞转录组测序数据处理与分析（FastQC、MultiQC、STAR、Seurat）。</li>
+                <li>数据质量控制与参考基因组比对（FastQC、STAR、featureCounts）。</li>
+                <li>数据表达定量及差异分析（DESeq2、edgeR）。</li>
+                <li>降维与聚类分析方法：PCA、t-SNE、UMAP。</li>
+                <li>细胞类型鉴定与功能富集分析。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        font-family: 'Arial', sans-serif; /* 更现代的字体 */
+    }
+
+    .sidebar {
+        width: 20%; /* 修改为占据1/5宽度 */
+        background-color: #333; /* 黑色背景 */
+        color: #fff; /* 白色字体 */
+        padding: 20px;
+        height: 100vh; /* 占满整个视窗高度 */
+        position: sticky;
+        top: 0;
+        overflow-y: auto; /* 当内容超出视窗高度时允许滚动 */
+        display: flex;
+        justify-content: center; /* 水平居中 */
+    }
+
+    .sidebar-content {
+        text-align: center; /* 内容居中 */
+    }
+
+    .sidebar h3 {
+        color: #fff;
+        font-size: 1.4em;
+        margin-bottom: 20px;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 15px;
+    }
+
+    .sidebar ul li a {
+        text-decoration: none;
+        color: #87CEEB; /* 链接颜色 */
+        font-size: 1.1em;
+        transition: color 0.3s; /* 悬停颜色变化 */
+    }
+
+    .sidebar ul li a:hover {
+        text-decoration: underline;
+        color: #FFD700; /* 悬停时颜色变化 */
+    }
+
+    .content {
+        flex: 1; /* 修改为占据剩余的4/5宽度 */
+        padding-left: 40px;
+        border-left: 2px solid #ADD8E6; /* 淡蓝色渐近线 */
+        padding-bottom: 50px; /* 增加底部padding */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 内容居中 */
+    }
+
+    .main-title {
+        font-size: 2.5em;
+        margin-bottom: 30px;
+        color: #333;
+        text-align: center; /* 标题居中 */
+    }
+
+    .section {
+        margin-bottom: 50px;
+        width: 80%; /* 段落宽度 */
+    }
+
+    .section h2 {
+        font-size: 2em;
+        margin-bottom: 15px;
+        color: #333;
+        border-bottom: 2px solid #ADD8E6; /* 标题和内容之间的淡蓝色渐近线 */
+        padding-bottom: 15px; /* 增加底部padding */
+    }
+
+    .section p,
+    .section ul {
+        font-size: 16px; /* 段落字体大小 */
+        line-height: 1.5; /* 段落行距 */
+        color: #555;
+    }
+
+    .section ul {
+        padding-left: 20px;
+        list-style-type: disc; /* 增加圆点符号 */
+    }
+
+    .section ul li {
+        margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column; /* 移动端改为垂直布局 */
+        }
+
+        .sidebar {
+            width: 100%; /* 移动端占满宽度 */
+            height: auto; /* 高度自适应 */
+            position: relative; /* 取消sticky */
+        }
+
+        .content {
+            padding-left: 20px; /* 减少左边距 */
+            border-left: none; /* 移动端去掉左侧边线 */
+        }
+    }
+</style>
