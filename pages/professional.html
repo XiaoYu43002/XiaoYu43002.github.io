@@ -208,9 +208,10 @@ permalink: /professional/
 
     function moveCarouselAndNavigate(index, url) {
         moveCarousel(index);
+        const delay = window.innerWidth > 768 ? 2000 : 0; // 根据屏幕宽度设置延迟时间
         setTimeout(() => {
             window.location.href = url;
-        }, 2000); // 延迟500毫秒后跳转
+        }, delay);
     }
 
     function checkPassword() {
